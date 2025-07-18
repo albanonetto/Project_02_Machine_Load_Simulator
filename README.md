@@ -7,6 +7,7 @@ Esta ferramenta é uma aplicação avançada em **Excel com Power Query e VBA**,
 O simulador processa a carteira de pedidos ou planos operativos, permitindo ajustar dinamicamente parâmetros como turnos de trabalho, mix de máquinas, e metas de OEE (Overall Equipment Effectiveness) para prever a ocupação e otimizar a alocação de recursos.
 
 ***
+![Imagem dashboard](Imagem2.jpg)
 
 ## ✨ Funcionalidades Principais
 
