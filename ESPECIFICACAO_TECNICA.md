@@ -21,7 +21,7 @@ A aplicação opera sobre uma arquitetura modular de quatro camadas, que separa 
 
 ### 2. Motor de Dados: ETL com Power Query (`Base_1`)
 
-A consulta no Power Query é responsável por processar o arquivo de engenharia `ena3005.xlsx`.
+A consulta no Power Query é responsável por processar o arquivo de engenharia .xlsx
 
 * **Lógica de Transformação:** A consulta implementa um padrão de **Unpivot/Pivot** para normalizar a estrutura de dados de entrada:
     1.  **Seleção e Unpivot:** Todas as colunas de processo genéricas (ex: `Grp Máquina 01` a `13`, `Item 01` a `13`, `Qtd Comp. 01` a `13`) são selecionadas e transformadas de colunas para linhas (`Unpivot`).
@@ -40,10 +40,10 @@ Esta tabela é a ponte entre o código VBA e a estrutura da planilha. O Motor de
 
 | Processo | AbaRoteiro | ColFamilia | ColSubfamilia | RangeOpcoes | TipoBusca |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Moldureiras | ROTEIROS | E | F | G:J | Padrão |
-| Primer | ROTEIROS | E | F | K:M | Padrão |
-| Fita de Desdobro | ROTEIROS | E | F | N:U | Simples |
-| Linha Integrada | ROTEIROS | E | F | G:M | Composta |
+| Setor1 | ROTEIROS | E | F | G:J | Padrão |
+| Setor2 | ROTEIROS | E | F | K:M | Padrão |
+| Setor3 | ROTEIROS | E | F | N:U | Simples |
+| Setor4 | ROTEIROS | E | F | G:M | Composta |
 | *Novo Processo* | *...* | *...* | *...* | *...* | *...* |
 
 * **Função das Colunas:**
@@ -59,8 +59,8 @@ Esta aba substitui todas as fórmulas `SE` gigantes e aninhadas para classifica�
 * **Tabela `TabelaSubfamilia`:**
 | Tipo | Subfamilia |
 | :---| :--- |
-| BASE | A |
-| CASING | C |
+| PRODUTO1 | A |
+| PRODUTO2 | C |
 | ... | ... |
 
 * **Tabela `TabelaFamilia`:**
@@ -77,9 +77,9 @@ Esta aba consolida todas as matrizes de roteiro (`RDF`, `MATRIZ MOLD`, etc.) em 
 
 | Processo | Familia | Subfamilia | Prioridade | Opcao_1 | Opcao_2 | Opcao_3 | ... |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Moldureiras | 1 | A | MOLDUREIRA | 2093 | 2092 | 2091 | |
-| Moldureiras | 1 | A | LINHA INTEGRADA| 2136 | 2137 | | |
-| Primer | 1 | A | PRIMER | 2131 | 2132 | 2133 | |
+| Setor1 | 1 | A | SETOR1 | 2093 | 2092 | 2091 | |
+| Setor2 | 1 | A | SETOR2| 2136 | 2137 | | |
+| Setor3 | 1 | A | SETOR3 | 2131 | 2132 | 2133 | |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 
 ---
