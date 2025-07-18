@@ -5,6 +5,8 @@
 #### 1.1. Objetivo
 O **Simulador de Carga Máquina** é uma aplicação de software desenvolvida em Microsoft Excel, projetada para fornecer ao Planejamento e Controle da Produção (PCP) uma ferramenta robusta para análise de capacidade e otimização da alocação de recursos. O sistema processa a carteira de pedidos, calcula a carga horária em cada centro de custo e reprograma automaticamente a produção para respeitar as restrições de capacidade, permitindo simulações de múltiplos cenários.
 
+![Imagem Simulador](Imagem2.jpg)
+
 #### 1.2. Arquitetura Modular
 A aplicação opera sobre uma arquitetura modular de quatro camadas, que separa as responsabilidades, garante a manutenibilidade e facilita futuras expansões:
 
@@ -14,6 +16,8 @@ A aplicação opera sobre uma arquitetura modular de quatro camadas, que separa 
 4.  **Motor de Otimização (VBA Generalizado):** Um conjunto enxuto e inteligente de código VBA que executa a lógica de simulação e reprogramação. O código é agnóstico às regras de negócio, pois as consulta diretamente do Motor de Regras.
 
 ---
+
+![Imagem Simulador1](Imagem3.jpg)
 
 ### 2. Motor de Dados: ETL com Power Query (`Base_1`)
 
